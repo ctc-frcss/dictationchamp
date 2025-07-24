@@ -73,7 +73,7 @@ export default function Welcome() {
         >
           <Button
             onClick={() => setLocation("/word-bank")}
-            className="bg-gradient-to-r from-primary-custom to-pink-custom text-white text-2xl font-fredoka py-6 px-12 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 animate-wiggle"
+            className="bg-gradient-to-r from-red-600 to-pink-600 text-white text-2xl font-fredoka py-6 px-12 rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 animate-wiggle"
             size="lg"
           >
             <Play className="mr-3 w-6 h-6" />

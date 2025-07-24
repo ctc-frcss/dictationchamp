@@ -132,7 +132,7 @@ export default function Game() {
               </h3>
               <Button
                 onClick={() => speak(currentWord)}
-                className="bg-gradient-to-r from-primary-custom to-pink-custom text-white text-xl font-fredoka py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-red-600 to-pink-600 text-white text-xl font-fredoka py-4 px-8 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 size="lg"
               >
                 <Volume2 className="mr-3 w-6 h-6" />
@@ -180,7 +180,7 @@ export default function Game() {
               </Button>
               <Button
                 onClick={handleSubmit}
-                className="bg-gradient-to-r from-success-custom to-secondary-custom text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-green-600 to-teal-600 text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                 size="lg"
               >
                 <Check className="mr-2 w-4 h-4" />
