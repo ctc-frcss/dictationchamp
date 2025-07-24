@@ -1,0 +1,51 @@
+🚀 Project Brief: Dictation Game App for Kids
+App Name: Dictation Champ
+🎯 Core Idea:
+Build an interactive dictation game web/app for elementary school students. Users can input or upload a vocabulary word bank, and the app turns it into an engaging speech-based quiz for practice and revision.
+✅ Key Features:
+Word Bank Input:
+Let the user paste in a list of vocabulary words OR upload a .csv or .xlsx file
+Optional: Allow image input and extract words using AI OCR (Optical Character Recognition)
+Start Game Logic:
+After input, user clicks "Start"
+App selects 10 words at random from the bank (allow repeats if under 10 words)
+Question Gameplay:
+Each question uses text-to-speech to pronounce a word
+Show blank blocks (one for each letter) for the user to drag and drop letters to spell the word
+If user struggles, allow a Hint Button that:
+Shows definition OR
+Reveals one correct letter
+Animations & Rewards:
+Add fun, colorful animations (e.g., stars, fireworks) when a question is answered correctly
+Use popular cartoon-style visuals or characters to make the UI fun and engaging for children
+Scoring System:
+Track correct answers and display a final score / correct rate at the end
+Allow exporting the result as a .csv file (e.g., word, user answer, correct/incorrect)
+👩‍🏫 User Flow:
+User opens app → sees colorful welcome screen → clicks "Start Game"
+Inputs vocab via:
+Text box (paste words, separated by commas or line breaks)
+OR Upload .csv / .xlsx
+(Optional) Upload image with text → AI extracts words via OCR
+App picks 10 words randomly
+Each round:
+Plays audio of word
+User drags letters into blank slots to form word
+Click Submit, then moves to next word
+Optional hint if stuck
+End screen shows:
+Score / Correct rate
+Play again button
+Export result to .csv
+🎨 Style & Vibe:
+Extremely kid-friendly and colorful
+Use rounded fonts, bright UI colors, and cute visual elements
+Incorporate cartoon characters or mascots to boost engagement
+✨ Bonus Features (Optional for MVP):
+Support image uploads with AI OCR to read vocab lists
+Save user sessions or let them log in for tracking progress over time
+Responsive design: should work on tablets and phones
+🛠️ Output Requirements:
+Build an interactive clickable prototype or working MVP
+Use placeholders for AI or backend features if not directly buildable
+Support export of final score/statistics as .csv
