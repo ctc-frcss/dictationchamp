@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@400;600;700&display=swap');
 
 :root {
   --background: hsl(0, 0%, 100%);
@@ -103,11 +103,11 @@
   }
   
   .bg-secondary-custom {
-    background-color: hsl(180, 52%, 59%);
+    background-color: hsl(180, 70%, 45%);
   }
   
   .bg-accent-custom {
-    background-color: hsl(43, 96%, 66%);
+    background-color: hsl(43, 96%, 50%);
   }
   
   .bg-success-custom {
@@ -115,11 +115,11 @@
   }
   
   .bg-purple-custom {
-    background-color: hsl(271, 45%, 56%);
+    background-color: hsl(271, 60%, 45%);
   }
   
   .bg-pink-custom {
-    background-color: hsl(320, 100%, 84%);
+    background-color: hsl(320, 100%, 65%);
   }
 
   .animate-wiggle {

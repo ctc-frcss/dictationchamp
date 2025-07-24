@@ -147,7 +147,7 @@ export function DragDropLetter({ word, userAnswer, onAnswerChange }: DragDropLet
             <motion.div
               key={index}
               className={`letter-slot bg-gray-100 rounded-xl w-16 h-16 flex items-center justify-center text-2xl font-bold cursor-pointer transition-all duration-300 ${
-                letter ? 'bg-secondary-custom/20 border-2 border-secondary-custom border-solid' : 'border-2 border-dashed border-gray-300'
+                letter ? 'bg-blue-100 border-2 border-blue-500 border-solid' : 'border-2 border-dashed border-gray-300'
               }`}
               onDragOver={handleDragOver}
               onDrop={(e) => handleDrop(e, index)}
@@ -160,7 +160,7 @@ export function DragDropLetter({ word, userAnswer, onAnswerChange }: DragDropLet
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   exit={{ scale: 0 }}
-                  className="text-gray-700"
+                  className="text-blue-800"
                 >
                   {letter.toUpperCase()}
                 </motion.span>
@@ -187,7 +187,7 @@ export function DragDropLetter({ word, userAnswer, onAnswerChange }: DragDropLet
             {availableLetters.filter(l => !l.used).map((letterObj) => (
               <motion.div
                 key={letterObj.id}
-                className={`letter-tile bg-gradient-to-br from-secondary-custom to-blue-400 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold cursor-grab shadow-lg hover:shadow-xl transition-all duration-300 ${
+                className={`letter-tile bg-gradient-to-br from-blue-600 to-blue-800 text-white w-14 h-14 rounded-xl flex items-center justify-center text-xl font-bold cursor-grab shadow-lg hover:shadow-xl transition-all duration-300 ${
                   draggedItem === letterObj.id ? 'dragging opacity-50' : ''
                 }`}
                 draggable

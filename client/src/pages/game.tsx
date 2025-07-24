@@ -173,7 +173,7 @@ export default function Game() {
               <Button
                 onClick={showHint}
                 disabled={isHintVisible || hintsUsed > 0}
-                className="bg-accent-custom hover:bg-yellow-500 text-white font-semibold"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold"
               >
                 <Lightbulb className="mr-2 w-4 h-4" />
                 Get Hint

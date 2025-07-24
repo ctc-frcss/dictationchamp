@@ -155,7 +155,7 @@ elephant"
               </h4>
               <Button
                 onClick={loadSampleWords}
-                className="bg-accent-custom hover:bg-yellow-500 text-white font-semibold"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold"
               >
                 Load Sample Word List
               </Button>
