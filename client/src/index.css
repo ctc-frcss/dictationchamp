@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@400;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(0, 83%, 69%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(180, 52%, 59%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(43, 96%, 66%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --success: hsl(142, 76%, 36%);
+  --success-foreground: hsl(60, 9.1%, 97.8%);
+  --purple: hsl(271, 45%, 56%);
+  --purple-foreground: hsl(60, 9.1%, 97.8%);
+  --pink: hsl(320, 100%, 84%);
+  --pink-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(0, 83%, 69%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(180, 52%, 59%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(43, 96%, 66%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --success: hsl(142, 76%, 36%);
+  --success-foreground: hsl(0, 0%, 98%);
+  --purple: hsl(271, 45%, 56%);
+  --purple-foreground: hsl(0, 0%, 98%);
+  --pink: hsl(320, 100%, 84%);
+  --pink-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .font-fredoka {
+    font-family: 'Fredoka One', cursive;
+  }
+}
+
+@layer utilities {
+  .text-primary-custom {
+    color: hsl(0, 83%, 69%);
+  }
+  
+  .text-secondary-custom {
+    color: hsl(180, 52%, 59%);
+  }
+  
+  .text-accent-custom {
+    color: hsl(43, 96%, 66%);
+  }
+  
+  .text-success-custom {
+    color: hsl(142, 76%, 36%);
+  }
+  
+  .text-purple-custom {
+    color: hsl(271, 45%, 56%);
+  }
+  
+  .bg-primary-custom {
+    background-color: hsl(0, 83%, 69%);
+  }
+  
+  .bg-secondary-custom {
+    background-color: hsl(180, 52%, 59%);
+  }
+  
+  .bg-accent-custom {
+    background-color: hsl(43, 96%, 66%);
+  }
+  
+  .bg-success-custom {
+    background-color: hsl(142, 76%, 36%);
+  }
+  
+  .bg-purple-custom {
+    background-color: hsl(271, 45%, 56%);
+  }
+  
+  .bg-pink-custom {
+    background-color: hsl(320, 100%, 84%);
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s infinite;
+  }
+
+  .letter-slot {
+    min-height: 60px;
+    border: 3px dashed hsl(20, 5.9%, 90%);
+    transition: all 0.3s ease;
+  }
+
+  .letter-slot.drag-over {
+    border-color: hsl(180, 52%, 59%);
+    background-color: hsl(180, 52%, 95%);
+    transform: scale(1.05);
+  }
+
+  .letter-tile {
+    cursor: grab;
+    transition: all 0.3s ease;
+  }
+
+  .letter-tile:hover {
+    transform: scale(1.1) rotate(5deg);
+  }
+
+  .letter-tile.dragging {
+    opacity: 0.5;
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 7% { 
+    transform: rotateZ(0deg); 
+  }
+  15% { 
+    transform: rotateZ(-15deg); 
+  }
+  20% { 
+    transform: rotateZ(10deg); 
+  }
+  25% { 
+    transform: rotateZ(-10deg); 
+  }
+  30% { 
+    transform: rotateZ(6deg); 
+  }
+  35% { 
+    transform: rotateZ(-4deg); 
+  }
+  40%, 100% { 
+    transform: rotateZ(0deg); 
+  }
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: fall 3s linear infinite;
+}
