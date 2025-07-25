@@ -32,20 +32,21 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: client/package-lock.json
+          # Use the lock file from the root directory
+          cache-dependency-path: package-lock.json
       - name: Install dependencies
+        # Run from the root directory
         run: npm install
-        working-directory: ./client    # <--- IMPORTANT CHANGE
       - name: Build
+        # Run from the root directory
         run: npm run build
-        working-directory: ./client    # <--- IMPORTANT CHANGE
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload from the 'dist' folder inside the 'client' directory
-          path: './client/dist'        # <--- IMPORTANT CHANGE
+          # Upload from the correct output directory
+          path: './dist/public'
       
   # Deployment job
   deploy:
