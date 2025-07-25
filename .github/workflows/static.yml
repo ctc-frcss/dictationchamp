@@ -1,27 +1,20 @@
-# Simple workflow for deploying a static Vite site to GitHub Pages
 name: Deploy Vite static site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     steps:
@@ -32,23 +25,19 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          # Use the lock file from the root directory
           cache-dependency-path: package-lock.json
       - name: Install dependencies
-        # Run from the root directory
         run: npm install
       - name: Build
-        # Run from the root directory
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload from the correct output directory
-          path: './dist/public'
+          # This is the corrected path
+          path: './client/dist'
       
-  # Deployment job
   deploy:
     environment:
       name: github-pages
