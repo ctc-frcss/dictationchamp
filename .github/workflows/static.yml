@@ -35,9 +35,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # This is the corrected path
           path: './client/dist'
-      
+
+  # 'deploy' must be at the same level as 'build'
   deploy:
     environment:
       name: github-pages
